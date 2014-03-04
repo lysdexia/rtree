@@ -612,7 +612,7 @@ class Index(object):
 
         """
         assert len(interleaved) % 2 == 0, ("must be a pairwise list")
-        dimension = len(interleaved) / 2
+        dimension = int(len(interleaved) / 2)
         di = []
         for i in range(dimension):
             di.extend([interleaved[i], interleaved[i + dimension]])
